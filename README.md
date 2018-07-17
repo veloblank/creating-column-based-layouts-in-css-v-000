@@ -10,9 +10,10 @@ layout option that degrades gracefully.
 ## Objectives
 
 1. Explain how to create column layouts using `float`
-2. Explain how to create column layouts using "flexbox"
-3. Explain how to create column layouts using `grid`
-4. Explain how to create column layouts with CSS columns
+2. Explain how to create column layouts using `inline-block`
+3. Explain how to create column layouts using "flexbox"
+4. Explain how to create column layouts using `grid`
+5. Explain how to create column layouts with CSS columns
 
 ## Explain how to Create Column Layouts Using `float`
 
@@ -66,6 +67,35 @@ responsive-friendly column layout with CSS `float` [here][https://webdesign.tuts
 This method is not recommended for new development, however, it will likely remain in
 existing sites for some time. Therefore, if you come across a design where almost everything
 seems to be floated, you will understand how to work within it.
+
+## Explain how to Create Column Layouts Using "inline-block"
+
+In addition to floats, we can position content with `display: inline-block`. The inline-block method, is
+primarily helpful for placing elements next to one another within a line.
+
+The `inline-block` property accepts all box model properties, including height, width, padding, border,
+and margin. Using inline-block elements allows us to take full advantage of the box model without having
+to worry about clearing floats.
+
+
+```html
+<div class="row">
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+</div>
+```
+```css
+.col {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+```
+
+<iframe width="100%" height="300" src="//jsfiddle.net/web_curriculum_kellye/xgchn01r/3/embedded/html,css,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+Because `inline-block` elements are displayed on the same line as one another, they include a single space between them. If the size of each single space is added to the width and horizontal margin values of all the elements in the row, it can mis-align elements. There are a few hacks to remove the space that can be found [here][https://css-tricks.com/fighting-the-space-between-inline-block-elements/].
 
 ## Explain how to Create Column Layouts Using "flexbox"
 
