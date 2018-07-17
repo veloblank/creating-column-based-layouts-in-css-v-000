@@ -8,10 +8,11 @@ the right combination of properties, building columns with CSS create a responsi
 layout option that degrades gracefully.
 
 ## Objectives
+
 1. Explain how to create column layouts using `float`
 2. Explain how to create column layouts using "flexbox"
-2. Explain how to create column layouts using CSS columns
 3. Explain how to create column layouts using `grid`
+4. Explain how to create column layouts with CSS columns
 
 ## Explain how to Create Column Layouts Using `float`
 
@@ -103,24 +104,100 @@ to create the columns, like so:
   width: 32%;
 }
 ```
-If you go the flexbox route, you have the ability to change the order of columns as needed, which can be great for switching up and refactoring content hierarchy.
+If you go the "flexbox" route, you have the ability to change the order of columns as needed,
+which can be great for switching up and refactoring content hierarchy.
 
 
-**NOTE: There are plenty of edge cases and browser support issues that you may run into if you start using more niche flexbox features.**
-
-## Explain how to Create Column Layouts Using CSS columns
+**NOTE: There are many edge cases and browser support issues that you may run into if you 
+start using more niche flexbox features.**
 
 ## Explain how to Create Column Layouts Using `grid`
 
-Grid is for layout of items in two dimensions – rows _and_ columns.
+Grid is for layout of items in two dimensions – rows _and_ columns. As with "flexbox", Grid Layout
+is a value of the `display` property. Start with `display: grid` on your container, and then set up
+columns and/or rows using the `grid-template-columns` and `grid-template-rows` properties.
 
-[Link to code used in video][link]
+```css
+.container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px;
+}
+```
+
+You can use any length unit or a percentage, but you can also use the new `fr` unit--a unit created for
+Grid Layout. The `fr` unit is a flex unit, and can distribute space for you; you don’t need to calculate
+percentages to ensure elements fit into a container. 
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+```
+Using `grid-gap` specifies the gaps (gutters) between rows and columns.
+
+A simpler way way to position elements in the grid is with line-based positioning. We can place an item
+from column line 1 to column line 3, and row line 1 to row line 3. It will then cover four grid cells in total, spanning two column tracks and two column rows.
+
+```css
+.item {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+```
+_or_
+```css
+.item {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+```
+
+For more resources, you can visi [More on CSS Grid Layout][https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout] or check
+out the links in the resources section.
+
+## Explain how to Create Column Layouts with CSS Columns
+
+CSS has the ability to organize content into columns and with vendor prefixes, you can get support
+across most browsers. The main use case for CSS columns is to break long sections of text into
+several columns, similar to in print media like newspapers and magazines. The great thing about CSS
+columns is that the columns are defined with CSS only, and they don’t require any additional markup. 
+
+However, with CSS columns, you can combine a grid system with a column layout! Grid supports fragmentation,
+which means that a grid will also flow into a multiple column layout. 
+
+```css
+.columns {
+  column-width: 200px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 2em;
+  grid-gap: .5em;
+}
+```
+
+<iframe width="100%" height="300" src="//jsfiddle.net/web_curriculum_kellye/g1jd8hLn/4/embedded/html,css,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+
+In the previous example, you can see the difference in the top container with only the Grid Layout setup,
+and the Grid Layout set up wrapped in CSS columns.
 
 ## Conclusion
 
-There are many ways to format columns. We've provided the groundwork for understanding how side-by-side elements interact on the page, and how a number of different properties can affect the flow. Understanding these properties will be useful as you become
-familiar with "fluid" versus "responsive" layouts.
+There are many ways to format columns. We've provided the groundwork for understanding how side-by-side elements interact on the page, and how a number of different properties can affect the flow. Understanding these properties will be useful as you become familiar with "fluid" versus "responsive" layouts.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/column-structure' title='Column Structure'>Column Structure</a> on Learn.co and start learning to code for free.</p>
 
-[link]: https://jsfiddle.net/flatiron_school/VGue9
+## Resources
+[The New Layout Standard For The Web: CSS Grid, Flexbox And Box Alignment][https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/]
+[Box Alignment Cheatsheet][https://rachelandrew.co.uk/css/cheatsheets/box-alignment]
+[A Complete Guide to Grid][https://css-tricks.com/snippets/css/complete-guide-grid/]
+[Grid by Example][https://gridbyexample.com/examples/]
