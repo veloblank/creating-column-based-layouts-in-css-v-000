@@ -68,7 +68,7 @@ This method is not recommended for new development, however, it will likely rema
 existing sites for some time. Therefore, if you come across a design where almost everything
 seems to be floated, you will understand how to work within it.
 
-## Explain how to Create Column Layouts Using "inline-block"
+## Explain how to Create Column Layouts Using `inline-block`
 
 In addition to floats, we can position content with `display: inline-block`. The inline-block method, is
 primarily helpful for placing elements next to one another within a line.
