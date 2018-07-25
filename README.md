@@ -187,7 +187,7 @@ _or_
 }
 ```
 
-For more resources, you can visi [More on CSS Grid Layout][https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout] or check
+For more resources, you can visit [More on CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout) or check
 out the links in the resources section.
 
 ## Explain how to Create Column Layouts with CSS Columns
@@ -227,7 +227,7 @@ There are many ways to format columns. We've provided the groundwork for underst
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/column-structure' title='Column Structure'>Column Structure</a> on Learn.co and start learning to code for free.</p>
 
 ## Resources
-[The New Layout Standard For The Web: CSS Grid, Flexbox And Box Alignment][https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/]
-[Box Alignment Cheatsheet][https://rachelandrew.co.uk/css/cheatsheets/box-alignment]
-[A Complete Guide to Grid][https://css-tricks.com/snippets/css/complete-guide-grid/]
-[Grid by Example][https://gridbyexample.com/examples/]
+* [The New Layout Standard For The Web: CSS Grid, Flexbox And Box Alignment](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
+* [Box Alignment Cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)
+* [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+* [Grid by Example](https://gridbyexample.com/examples/)
