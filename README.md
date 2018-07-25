@@ -61,8 +61,8 @@ padding, borders, etc. included, without having to calculate math and manage the
 come from varying widths that compound from multiple properties, and change the size of the container.
 
 There are many ways to set up a CSS column structure using floats. Some of the
-most common methods come in the form of CSS frameworks such as [Bootstrap 3][https://getbootstrap.com/docs/3.3], built with floating elements, fixed margins, and a 12-column grid system. You can read about a
-responsive-friendly column layout with CSS `float` [here][https://webdesign.tutsplus.com/tutorials/quick-tip-building-responsive-layouts-with-floats--cms-25625].
+most common methods come in the form of CSS frameworks such as [Bootstrap 3](https://getbootstrap.com/docs/3.3), built with floating elements, fixed margins, and a 12-column grid system. You can read about a
+responsive-friendly column layout with CSS `float` [here](https://webdesign.tutsplus.com/tutorials/quick-tip-building-responsive-layouts-with-floats--cms-25625).
 
 This method is not recommended for new development, however, it will likely remain in
 existing sites for some time. Therefore, if you come across a design where almost everything
@@ -95,7 +95,7 @@ to worry about clearing floats.
 
 <iframe width="100%" height="300" src="//jsfiddle.net/web_curriculum_kellye/xgchn01r/3/embedded/html,css,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
-Because `inline-block` elements are displayed on the same line as one another, they include a single space between them. If the size of each single space is added to the width and horizontal margin values of all the elements in the row, it can mis-align elements. There are a few hacks to remove the space that can be found [here][https://css-tricks.com/fighting-the-space-between-inline-block-elements/].
+Because `inline-block` elements are displayed on the same line as one another, they include a single space between them. If the size of each single space is added to the width and horizontal margin values of all the elements in the row, it can mis-align elements. There are a few hacks to remove the space that can be found [here](https://css-tricks.com/fighting-the-space-between-inline-block-elements/).
 
 ## Explain how to Create Column Layouts Using "flexbox"
 
