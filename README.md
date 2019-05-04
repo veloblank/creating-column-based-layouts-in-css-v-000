@@ -121,7 +121,7 @@ property `display: flex`.
 }
 ```
 
-This will support any number of columns will automatically be equal widths and flexible.
+This will support any number of columns that will automatically be equal widths and flexible.
 If you need gutters, you can add margins and padding to the columns. You can use `justify-content`
 to create the columns, like so:
 
